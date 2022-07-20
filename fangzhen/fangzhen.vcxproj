@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E37B9D6B-B023-48E9-BDED-7302DA449D54}</ProjectGuid>
+    <RootNamespace>fangzhen</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SECURE_SCL=0;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(UGII_BASE_DIR)\ugopen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)/fangzhen.dll</OutputFile>
+      <ImportLibrary>$(OutDir)/fangzhen.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(UGII_BASE_DIR)\ugopen;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libufun.lib;libufun_cae.lib;libufun_cam.lib;libnxopencpp.lib;libnxopencpp_annotations.lib;libnxopencpp_assemblies.lib;libnxopencpp_bodydes.lib;libnxopencpp_cae.lib;libnxopencpp_cam.lib;libnxopencpp_diagramming.lib;libnxopencpp_die.lib;libnxopencpp_display.lib;libnxopencpp_drafting.lib;libnxopencpp_drawings.lib;libnxopencpp_facet.lib;libnxopencpp_features.lib;libnxopencpp_fields.lib;libnxopencpp_formboard.lib;libnxopencpp_gateway.lib;libnxopencpp_geometricanalysis.lib;libnxopencpp_geometricutilities.lib;libnxopencpp_issue.lib;libnxopencpp_layer.lib;libnxopencpp_layout2d.lib;libnxopencpp_markup.lib;libnxopencpp_mechatronics.lib;libnxopencpp_modldirect.lib;libnxopencpp_motion.lib;libnxopencpp_optimization.lib;libnxopencpp_options.lib;libnxopencpp_partfamily.lib;libnxopencpp_pdm.lib;libnxopencpp_physmat.lib;libnxopencpp_positioning.lib;libnxopencpp_preferences.lib;libnxopencpp_routing.lib;libnxopencpp_shapesearch.lib;libnxopencpp_sheetmetal.lib;libnxopencpp_sim.lib;libnxopencpp_tooling.lib;libnxopencpp_userdefinedobjects.lib;libnxopencpp_userdefinedtemplate.lib;libnxopencpp_validate.lib;libnxopencpp_visualreporting.lib;libnxopencpp_weld.lib;libugopenint.lib;libugopenint_cae.lib;libugopenint_cam.lib;libnxopenuicpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>E:\Desktop\延锋\zhenghe10.0\fangzhen\eigen;$(UGII_BASE_DIR)\ugopen;E:\Desktop\延锋\zhenghe10.0\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>D:\NX10.0\UGOPEN;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SECURE_SCL=0;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\eigen;$(UGII_BASE_DIR)\ugopen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <TargetMachine>MachineX64</TargetMachine>
+      <OutputFile>$(OutDir)/fangzhen.dll</OutputFile>
+      <ImportLibrary>$(OutDir)/fangzhen.lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(UGII_BASE_DIR)\UGOPEN;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libufun.lib;libufun_cae.lib;libufun_cam.lib;libnxopencpp.lib;libnxopencpp_annotations.lib;libnxopencpp_assemblies.lib;libnxopencpp_bodydes.lib;libnxopencpp_cae.lib;libnxopencpp_cam.lib;libnxopencpp_diagramming.lib;libnxopencpp_die.lib;libnxopencpp_display.lib;libnxopencpp_drafting.lib;libnxopencpp_drawings.lib;libnxopencpp_facet.lib;libnxopencpp_features.lib;libnxopencpp_fields.lib;libnxopencpp_formboard.lib;libnxopencpp_gateway.lib;libnxopencpp_geometricanalysis.lib;libnxopencpp_geometricutilities.lib;libnxopencpp_issue.lib;libnxopencpp_layer.lib;libnxopencpp_layout2d.lib;libnxopencpp_markup.lib;libnxopencpp_mechatronics.lib;libnxopencpp_modldirect.lib;libnxopencpp_motion.lib;libnxopencpp_optimization.lib;libnxopencpp_options.lib;libnxopencpp_partfamily.lib;libnxopencpp_pdm.lib;libnxopencpp_physmat.lib;libnxopencpp_positioning.lib;libnxopencpp_preferences.lib;libnxopencpp_routing.lib;libnxopencpp_shapesearch.lib;libnxopencpp_sheetmetal.lib;libnxopencpp_sim.lib;libnxopencpp_tooling.lib;libnxopencpp_userdefinedobjects.lib;libnxopencpp_userdefinedtemplate.lib;libnxopencpp_validate.lib;libnxopencpp_visualreporting.lib;libnxopencpp_weld.lib;libugopenint.lib;libugopenint_cae.lib;libugopenint_cam.lib;libnxopenuicpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dynamic_simulation.cpp" />
+    <ClCompile Include="fangzhen.cpp" />
+    <ClCompile Include="irb5400.cpp" />
+    <ClCompile Include="irb5400.h" />
+    <ClCompile Include="irb5500.cpp" />
+    <ClCompile Include="irb5500.h" />
+    <ClCompile Include="p250ib.cpp" />
+    <ClCompile Include="p250ib.h" />
+    <ClCompile Include="point.cpp" />
+    <ClCompile Include="process_data.cpp" />
+    <ClCompile Include="robot.cpp" />
+    <ClCompile Include="station.cpp" />
+    <ClCompile Include="trajectory_planning.cpp" />
+    <ClCompile Include="utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dynamic_simulation.h" />
+    <ClInclude Include="fangzhen.hpp" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="process_data.h" />
+    <ClInclude Include="robot.h" />
+    <ClInclude Include="station.h" />
+    <ClInclude Include="trajectory_planning.h" />
+    <ClInclude Include="utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\eigen\Eigen\Eigen" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
